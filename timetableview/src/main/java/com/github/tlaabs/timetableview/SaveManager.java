@@ -26,6 +26,7 @@ public class SaveManager {
                 obj3.addProperty("classTitle",schedule.classTitle);
                 obj3.addProperty("classPlace",schedule.classPlace);
                 obj3.addProperty("professorName",schedule.getProfessorName());
+                obj3.addProperty("hourPay",schedule.getHourPay());
                 obj3.addProperty("day",schedule.getDay());
                 JsonObject obj4 = new JsonObject();//startTime
                 obj4.addProperty("hour",schedule.getStartTime().getHour());
@@ -60,6 +61,7 @@ public class SaveManager {
                 schedule.setClassTitle(obj3.get("classTitle").getAsString());
                 schedule.setClassPlace(obj3.get("classPlace").getAsString());
                 schedule.setProfessorName(obj3.get("professorName").getAsString());
+                schedule.setHourPay(obj3.get("hourPay").getAsString());
                 schedule.setDay(obj3.get("day").getAsInt());
                 Time startTime = new Time();
                 JsonObject obj4 = (JsonObject)obj3.get("startTime");
